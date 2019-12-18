@@ -1,10 +1,9 @@
 defmodule Task4 do
-  def initials(nil) do "?" end
-  def initials("") do "?" end
+  def initials(name) when is_nil(name) or byte_size(name) == 0 do "?" end
   def initials(name) do
     name
     |> String.split(" ")
-    |> Enum.map(fn(x) -> String.first(x) end)
+    |> Enum.map(&String.at(&1, 0))
     |> Enum.join
   end
 end
