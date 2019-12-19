@@ -7,7 +7,7 @@ defmodule Task4Test do
   end
 
   test "greets the world when long name provided" do
-    assert Task4.initials("Roberto Artiles Astelarra") == "RAA"
+    assert Task4.initials("Roberto Artiles Astelarra") == "RA"
   end
 
   test "greets the world when first name provided" do
